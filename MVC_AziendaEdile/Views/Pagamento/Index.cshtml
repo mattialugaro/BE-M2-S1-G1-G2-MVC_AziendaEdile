@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2> <!--Pagamenti-->
+
+<table>
+    <caption>Elenco Pagamenti</caption>
+    <thead>
+        <tr>
+            <th>Periodo del Pagamento</th>
+            <th>Ammontare del Pagamento</th>
+            <th>Acconto o Stipendio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (MVC_AziendaEdile.Models.Pagamento p in Model)
+        {
+            <tr>
+                <td>@p.PeriodoPagamento</td>
+                <td>@p.AmmontarePagamento</td>
+                <td>@p.AccontoStipendio</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
