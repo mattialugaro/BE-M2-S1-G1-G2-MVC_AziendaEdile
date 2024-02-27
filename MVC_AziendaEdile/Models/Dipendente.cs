@@ -30,5 +30,6 @@ namespace MVC_AziendaEdile.Models
             NumeroFigli = numeroFigli;
             Mansione = mansione;
         }
+        
     }
 }

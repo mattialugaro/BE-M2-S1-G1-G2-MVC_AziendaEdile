@@ -14,14 +14,16 @@ namespace MVC_AziendaEdile.Models
 
         [Display(Name = "Versamento Acconto o Stipendio")]
         public string AccontoStipendio { get; set; }
+        public int IDDipendente { get; set; }
         
         public Pagamento() { }
 
-        public Pagamento(DateTime periodoPagamento, decimal ammontarePagamento, string accontoStipendio)
+        public Pagamento(DateTime periodoPagamento, decimal ammontarePagamento, string accontoStipendio, int idDipendente)
         {
             PeriodoPagamento = periodoPagamento;
             AmmontarePagamento = ammontarePagamento;
             AccontoStipendio = accontoStipendio;
+            IDDipendente = idDipendente;
         }
     }
 }

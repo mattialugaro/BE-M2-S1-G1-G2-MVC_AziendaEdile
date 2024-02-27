@@ -1,11 +1,11 @@
-﻿
+﻿﻿@model List<MVC_AziendaEdile.Models.Dipendente>
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2> <!--Dipendenti-->
 
-<table>
+<table class="border border-2 border-dark text-center">
     <caption>Elenco Dipendenti</caption>
     <thead>
         <tr>
@@ -19,18 +19,20 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(MVC_AziendaEdile.Models.Dipendente d in Model)
-            {
-                <tr>
-                    <td>@d.Nome</td>
-                    <td>@d.Cognome</td>
-                    <td>@d.Indirizzo</td>
-                    <td>@d.CodiceFiscale</td>
-                    <td>@d.Coniugato</td>
-                    <td>@d.NumeroFigli</td>
-                    <td>@d.Mansione</td>     
-                </tr>
-            }    
+        @foreach (MVC_AziendaEdile.Models.Dipendente d in Model)
+        {
+            <tr>
+                <td>@d.Nome</td>
+                <td>@d.Cognome</td>
+                <td>@d.Indirizzo</td>
+                <td>@d.CodiceFiscale</td>
+                <td>@d.Coniugato</td>
+                <td>@d.NumeroFigli</td>
+                <td>@d.Mansione</td>
+            </tr>
+        }
     </tbody>
 </table>
+
+<a class="text-decoration-none fw-bold m-1" href="~/Home/Index">Torna alla Home</a>
 
